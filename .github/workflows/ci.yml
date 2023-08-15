@@ -22,7 +22,7 @@ jobs:
           npm run build
 
       - name: Deploy # 将打包内容发布到 github page
-        uses: JamesIves/github-pages-deploy-action@v4 # 使用别人写好的 actions
+        uses: JamesIves/github-pages-deploy-action@v4
         with: # 自定义环境变量
           token: ${{ secrets.TEST_A_B }}
           branch: master
