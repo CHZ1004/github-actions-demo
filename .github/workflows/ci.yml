@@ -3,10 +3,12 @@ on: # 监听 master 分支上的 push 事件
   push:
     branches:
       - master
+permissions:
+  contents: write
 jobs:
   build-and-deploy:
     permissions:
-      contents: write
+      contents: read
     runs-on: ubuntu-latest # 构建环境使用 ubuntu
     steps:
       - name: Checkout
