@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest # 构建环境使用 ubuntu
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
@@ -18,10 +18,10 @@ jobs:
           npm run build
 
       - name: Deploy # 将打包内容发布到 github page
-        uses: JamesIves/github-pages-deploy-action@3.7.1 # 使用别人写好的 actions
+        uses: JamesIves/github-pages-deploy-action@v4 # 使用别人写好的 actions
         with: # 自定义环境变量
-          ACCESS_TOKEN: ${{ secrets.TEST_A_B }}
-          BRANCH: master
-          FOLDER: dist
-          REPOSITORY_NAME: CHZ1004/CHZ1004.github.io # 这是我的 github page 地址
-          TARGET_FOLDER: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
+          token: ${{ secrets.TEST_A_B }}
+          branch: master
+          folder: dist
+          repository-name: CHZ1004/CHZ1004.github.io # 这是我的 github page 地址
+          target-folder: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
