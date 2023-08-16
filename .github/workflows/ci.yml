@@ -25,7 +25,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with: # 自定义环境变量
           token: ${{ secrets.TEST_A_B }}
-          branch: master
+          branch: main
           folder: dist
-          repository-name: CHZ1004/CHZ1004.github.io # 这是我的 github page 地址
+          repository-name: chz1004/chz1004.github.io # 这是我的 github page 地址
           target-folder: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
