@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background-image: url(./background.png);
+}
+.node-label {
+  color: white;
+  padding-right: 10px;
+  /* left: -94px; */
+  border-radius: 3px;
+}
+.node-label2 {
+  color: white;
+  padding-right: 10px;
+  opacity: 0;
+}
+.label-opacity {
+  opacity: 0.5;
+}
+/* .label-opacity2 {
+  opacity: 0;
+} */
+.label-opaque {
+  opacity: 1;
+}
+
+.error-box {
+  color: white;
+  width: 100px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(93, 46, 74, 1);
+  border-radius: 5px;
+  border: 2px solid rgb(190, 42, 65);
+  margin-left: 120px;
+}
+.error-title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
